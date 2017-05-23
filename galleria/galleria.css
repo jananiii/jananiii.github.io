@@ -1,0 +1,76 @@
+#galleria{
+    background-color: #303841;
+    width: 60%;
+    height: 500px;
+    display: flex;
+}
+
+#galleria img{
+    
+}
+
+#galleria #left{
+    background-color: #38424d;
+    flex: 1;
+}
+
+#galleria #main{
+    flex: 3;
+}
+
+#galleria #main>div{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    font-family: Roboto Slab;
+    display: flex;
+    color: #fff;
+    align-items: flex-end;
+}
+
+#galleria #main>div>div{
+    background-color: rgba(48,56,65, 0.8);
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#galleria #left{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#galleria #left>div{
+    flex: 1;
+    margin: 10px;
+    margin-bottom: 0;
+    background-color: #303841;
+}
+
+#galleria #left>div:last-child{
+    margin-bottom: 10px
+}
+
+#galleria #left>div>div{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#galleria #left>div>div>div{
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 0.3s;
+}
+
+#galleria #left>div>div>div:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0) !important;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 800px){
+    #galleria{
+        flex-direction: column;
+    }
+}
