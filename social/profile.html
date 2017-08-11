@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <title>Stagger</title>
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/feed.css">
+        <link rel = "stylesheet" href = "css/profile.css">
+        <link rel = "stylesheet" href = "css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed" rel="stylesheet">
+        <script src = "js/jquery.js"></script>
+        <script src = "js/script.js"></script>
+        <script src="https://use.fontawesome.com/0de418b582.js"></script>
+<!--        <script src = "css/materialize/js/materialize.min.js"></script>-->
+    </head>
+    <body>
+        
+        <div id = "photoViewer">
+            
+            <div id = "innerViewer">
+                
+                <span id = "closeButton" onclick = "closeButton()" class = "fa fa-close"></span>
+                
+                <div id = "meta_data">
+                    <img src = "images/dp.jpg" width = "90px">
+                    <div>
+                        <p style = "font-size: 17px; font-weight: bold; margin-bottom: 5px;">Sri Ram</p>
+                        <small><span class = "fa fa-globe" style = "margin-right: 5px;"></span>August 11, 2017. 2:50 PM</small>
+                    </div>
+                </div>
+                <hr>
+                
+                <div id = "image_src" style = "background-image: url('images/alan.jpg');"></div>
+                
+                <div id = "likebox">
+                    <span id = "liked" class = "fa fa-thumbs-o-up"></span> <span class = "count" onclick = "like()">102</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class = "fa fa-comments"></span> <span class = "comment_count">1</span>
+                </div>
+                
+                <div id = "photo_comments" style = "max-height: 200px; overflow: scroll;">
+                    <div id = "comment_meta">
+                        <p><b>Ravi</b></p>
+                        <p>This is a new comment</p>
+                    </div>
+                </div>
+                
+                <div id = "comment_text_box">
+                    <input id = "input_comment" type = "text" class = "form-control" style = "margin-right: 20px;" placeholder = "Type your comment">
+                    <button class = "btn btn-success" onclick = "comment()">Post</button>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <header>
+            
+            Stagger
+            
+        </header>
+        
+        <div id = "container">
+            
+            <div id = "master">
+                
+                <div id = "dp" style = "background-image: url('images/dp.jpg');"></div>
+                
+                <div id = "info">
+                    <p>Sri Ram</p>
+                    <p class = "location"><span class = "fa fa-map-marker"></span> Lives in Coimbatore</p>
+                </div>
+                
+            </div>
+            
+            <div id = "details">
+                
+                <div id = "left">
+                    
+                    <div id = "friends">
+                        <p class = "title">Friends</p>
+                        
+                        <div id = "faces">
+                            <div id = "row1">
+                                <img src = "images/dp1.jpg" width = "32%">
+                                <img src = "images/dp2.jpg" width = "32%">
+                                <img src = "images/dp3.jpg" width = "32%">
+                            </div>
+
+                            <div id = "row1">
+                                <img src = "images/dp4.jpg" width = "32%">
+                                <img src = "images/dp5.jpg" width = "32%">
+                                <img src = "images/dp6.jpg" width = "32%">
+                            </div>
+
+                            <div id = "row1">
+                                <img src = "images/dp7.png" width = "32%">
+                                <img src = "images/dp8.jpg" width = "32%">
+                                <img src = "images/dp9.jpg" width = "32%">
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <br><br>
+                    
+                    <div id = "friends" class = "photos">
+                        <p class = "title">Photos</p>
+                        
+                        <div id = "faces">
+                            <div id = "row1">
+                                <img src = "images/1.jpg" width = "49%">
+                                <img src = "images/3.jpg" width = "49%">
+                            </div>
+
+                            <div id = "row1">
+                                <img src = "images/4.jpg" width = "49%">
+                                <img src = "images/5.jpg" width = "49%">
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <div id = "right">
+                    
+                    <div id = "post">
+                        <div id = "meta_data">
+                            <img src = "images/dp.jpg" width = "90px">
+                            <div>
+                                <p style = "font-size: 17px; font-weight: bold; margin-bottom: 5px;">Sri Ram</p>
+                                <small><span class = "fa fa-globe" style = "margin-right: 5px;"></span>August 11, 2017. 2:50 PM</small>
+                            </div>
+                        </div>
+                        <div id = "content">
+                            Can't beleive Alan Rickman is gone! :(
+                        </div>
+                    </div>
+                    
+                    <br>
+                    
+                    <div id = "post">
+                        <div id = "meta_data">
+                            <img src = "images/dp.jpg" width = "90px">
+                            <div>
+                                <p style = "font-size: 17px; font-weight: bold; margin-bottom: 5px;">Sri Ram</p>
+                                <small><span class = "fa fa-globe" style = "margin-right: 5px;"></span>August 11, 2017. 2:50 PM</small>
+                            </div>
+                        </div>
+                        <div id = "content">
+                            "What's your name?"
+"I am Daenerys Targaryen, Mother of Dragons, Khaleesi to Drogo's riders-"
+*Starbucks barista quits on the spot*
+                        </div>
+                    </div>
+                    
+                    <br>
+                    
+                    <div id = "post">
+                        <div id = "meta_data">
+                            <img src = "images/dp.jpg" width = "90px">
+                            <div>
+                                <p style = "font-size: 17px; font-weight: bold; margin-bottom: 5px;">Sri Ram</p>
+                                <small><span class = "fa fa-globe" style = "margin-right: 5px;"></span>August 11, 2017. 2:50 PM</small>
+                            </div>
+                        </div>
+                        <div id = "content">
+                            Something I enjoy thinking about while watching Game of Thrones is how many people are getting paid to fall off horses
+                        </div>
+                    </div>
+                    
+                    <br>
+                    
+                    <div id = "post">
+                        <div id = "meta_data">
+                            <img src = "images/dp.jpg" width = "90px">
+                            <div>
+                                <p style = "font-size: 17px; font-weight: bold; margin-bottom: 5px;">Sri Ram</p>
+                                <small><span class = "fa fa-globe" style = "margin-right: 5px;"></span>August 11, 2017. 2:50 PM</small>
+                            </div>
+                        </div>
+                        <div id = "content">
+                            mom: don't eat the cookies yet, they just came out of the oven and are too hot
+me: fire cannot kill a dragon
+                        </div>
+                    </div>
+                    
+                    <br>
+                    
+                    <div id = "post">
+                        <div id = "meta_data">
+                            <img src = "images/dp.jpg" width = "90px">
+                            <div>
+                                <p style = "font-size: 17px; font-weight: bold; margin-bottom: 5px;">Sri Ram</p>
+                                <small><span class = "fa fa-globe" style = "margin-right: 5px;"></span>August 11, 2017. 2:50 PM</small>
+                            </div>
+                        </div>
+                        <div id = "content">
+                            I just want to see one Game of Thrones wedding that gets to the Electric Slide before someone dies
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <footer>
+            &copy; 2017. Designed by Sri Janani.
+        </footer>
+        
+        <script>
+            
+            $(document).ready(function(){
+                $(".photos #faces img").on('click', function(){
+                    $("#photoViewer #innerViewer #image_src").css("background-image", "url('" + $(this).attr("src") + "')");
+                    $("#photoViewer").fadeIn();
+                    $("#photoViewer").css("display", "flex");
+                });
+            });
+            
+            function closeButton(){
+                $("#photoViewer").fadeOut();
+            }
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,15 @@
+header, footer{
+    background-color: #355d98;
+    color: #fff;
+    padding: 20px;
+    font-family: Source Sans Pro;
+    font-size: 20px;
+    box-shadow: 0 0 5px #00aeef;
+    z-index: 100000;
+}
+
+footer{
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}

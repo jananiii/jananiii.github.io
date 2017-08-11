@@ -1,0 +1,204 @@
+<html>
+    <head>
+        <title>Stagger</title>
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/feed.css">
+        <link rel = "stylesheet" href = "css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed" rel="stylesheet">
+        <script src = "js/jquery.js"></script>
+        <script src = "js/script.js"></script>
+        <script src="https://use.fontawesome.com/0de418b582.js"></script>
+<!--        <script src = "css/materialize/js/materialize.min.js"></script>-->
+    </head>
+    <body>
+        
+        <div id = "photoViewer">
+            
+            <div id = "innerViewer">
+                
+                <span id = "closeButton" onclick = "closeButton()" class = "fa fa-close"></span>
+                
+                <div id = "meta_data">
+                    <img src = "images/dp.jpg" width = "90px">
+                    <div>
+                        <p style = "font-size: 17px; font-weight: bold; margin-bottom: 5px;">Sri Ram</p>
+                        <small><span class = "fa fa-globe" style = "margin-right: 5px;"></span>August 11, 2017. 2:50 PM</small>
+                    </div>
+                </div>
+                <hr>
+                
+                <div id = "image_src" style = "background-image: url('images/alan.jpg');"></div>
+                
+                <div id = "likebox">
+                    <span id = "liked" class = "fa fa-thumbs-o-up"></span> <span class = "count" onclick = "like()">102</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class = "fa fa-comments"></span> <span class = "comment_count">1</span>
+                </div>
+                
+                <div id = "photo_comments" style = "max-height: 200px; overflow: scroll;">
+                    <div id = "comment_meta">
+                        <p><b>Ravi</b></p>
+                        <p>This is a new comment</p>
+                    </div>
+                </div>
+                
+                <div id = "comment_text_box">
+                    <input id = "input_comment" type = "text" class = "form-control" style = "margin-right: 20px;" placeholder = "Type your comment">
+                    <button class = "btn btn-success" onclick = "comment()">Post</button>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <header>
+            
+            Stagger
+            
+            <a href = "profile.html" style = "float: right; color: #fff;">Profile</a>
+            
+        </header>
+        
+        <div id = "container">
+            
+            <div id = "top_bar">
+                <p>Hey there!</p>
+            </div>
+            
+            <div id = "rows">
+            
+                <div id = "first_row">
+                    <div class = "image" style = "background-image: url('images/1.png');">
+                        
+                    </div>
+                    <div class = "text">
+                        <img src = "images/dp.jpg" width = "130px"><br>
+                        <p><span class = "fa fa-comment"></span> Sri posted on your wall</p>
+                    </div>
+                    <div class = "image" style = "background-image: url('images/ironman.jpg');">
+                        <p class = "description"><span class = "fa fa-comment"></span> The new Iron Man movie is a blockbuster!</p>
+                    </div>
+                    <div class = "text alter">
+                        <span class = "fa fa-birthday-cake" style = "font-size: 30px;"></span><br>
+                        <p style = "text-align: center;">Janani is celebrating her birthday today! Send your thoughts <span class = "fa fa-heart" style = "color: red;"></span></p>
+                    </div>
+                </div>
+
+                <div id = "second_row">
+                    <div class = "text">
+                        <p>"I hope Game of Thrones ends with everybody dead, and the throne realizing that true power comes from the confidence to be yourself."</p>
+                        <span class = "arrow-right"></span>
+                    </div>
+                    
+                    <div class = "image" style = "background-image: url('images/2.jpg');">
+                        
+                    </div>
+                    
+                    <div class = "text alter">
+                        <span class = "fa fa-calendar" style = "font-size: 30px;"></span><br>
+                        <p style = "text-align: center;">TED Talk by Ken Robinson on 12/07/2017</p>
+                    </div>
+                    
+                    <div class = "image" style = "background-image: url('images/vv.jpg');">
+                        
+                    </div>
+                </div>
+                
+                <div id = "third_row">
+                    
+                    <div class = "image" style = "background-image: url('images/alan.jpg');">
+                        <p class = "description"><span class = "fa fa-comment"></span> Can't beleive he's gone &#128531;</p>
+                    </div>
+                    
+                    <div class = "text alter">
+                        <p style = "text-align: center;"><span class = "fa fa-picture-o"></span> Janani tagged you in a photo.</p>
+                        <span class = "arrow-right"></span>
+                    </div>
+                    
+                    <div class = "text" style = "background-image: url('images/groupfie.jpg'); background-size: cover; background-position: center;">
+                        
+                    </div>
+                    
+                    
+                    <div class = "comments" >
+                        <span class = "arrow-up"></span>
+                        <div class = "meta">
+                            <p style = "font-size: 16px;"><span class = "fa fa-star" style = "color: #f8b044;"></span>&nbsp;&nbsp; <b>Sri</b> posted 52 minutes ago</p>
+                            <p>That was one hell of a movie! &#128525;</p>
+                        </div>
+                        <div class = "comment_meta">
+                            <span class = "fa fa-thumbs-up"></span> 102&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class = "fa fa-comments"></span> 12
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <script>
+            
+            $(document).ready(function(){
+                
+                $("#rows .text").each(function(){
+                    var w = $(this).offset().left + $(this).width() + 30;
+                    $(this).children(".arrow-right").css("left", w + "px");
+                });
+                
+                $("#rows .comments").each(function(){
+                    var w = $(this).offset().top - 25;
+                    var l = $(this).offset().left + 25;
+                    $(this).children(".arrow-up").css("top", w + "px");
+                    $(this).children(".arrow-up").css("left", l + "px");
+                });
+                
+                $("#rows .image").on('click', function(){
+                    $("#photoViewer #innerViewer #image_src").css("background-image", $(this).css("background-image"));
+                    $("#photoViewer").fadeIn();
+                    $("#photoViewer").css("display", "flex");
+                });
+                
+                
+            });
+            
+            function comment(){
+                var c = $("#input_comment").val();
+                if(c == ""){
+                    alert("Empty comments not allowed");
+                }
+                else{
+                    var data = "<br><div id = 'comment_meta'><p><b>You</b></p><p>" + c + "</p></div>";
+                    $("#photo_comments").append(data);
+                    
+                    var num = parseInt($("#likebox .comment_count").html()) + 1;
+                    $("#likebox .comment_count").html(num);
+                }
+            }
+            
+            function like(){
+                if($("#likebox #liked").hasClass('fa-thumbs-o-up')){
+                    
+                    $("#likebox #liked").removeClass('fa-thumbs-o-up');
+                    $("#likebox #liked").addClass('fa-thumbs-up');
+                    
+                    var num = parseInt($("#likebox .count").html()) + 1;
+                    $("#likebox .count").html(num);
+                }
+                else{
+                    $("#likebox #liked").removeClass('fa-thumbs-up');
+                    $("#likebox #liked").addClass('fa-thumbs-o-up');
+                    
+                    var num = parseInt($("#likebox .count").html()) - 1;
+                    $("#likebox .count").html(num);
+                }
+                
+            }
+            
+            function closeButton(){
+                $("#photoViewer").fadeOut();
+            }
+            
+        </script>
+        
+    </body>
+</html>

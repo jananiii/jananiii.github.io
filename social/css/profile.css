@@ -1,0 +1,104 @@
+#master{
+    height: 45%;
+    width: 100%;
+    background-image: url('../images/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 8%;
+    
+}
+
+#master #dp{
+    width: 200px;
+    height: 200px;
+    background-size: 100%;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #333;
+    margin-right: 50px;
+}
+
+#master #info{
+    flex: 1;
+}
+
+#master #info p:first-child{
+    font-size: 35px;
+    font-family: Roboto Condensed;
+    color: #fff;
+    text-shadow: 0 0 5px #333;
+}
+
+#master #info .location{
+    background-color: rgba(255,255,255,0.6);
+    display: inline;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+#details{
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    background-color: #f1f1f1;
+}
+
+#details #left{
+    flex: 2;
+    margin-right: 50px;
+}
+
+#details #left > div{
+    background-color: #fff;
+    box-shadow: 0 0 5px #d1d1d1;
+}
+
+#details #left .title{
+    padding: 20px;
+    font-family: Source Sans Pro, Calibri;
+    background-color: #f1f1f1;
+    font-size: 16px;
+}
+
+#details #left #row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#details #left #row1 img{
+    margin-right: 5px;
+}
+
+#details #left #row1 img:last-child{
+    margin-right: 0px;
+}
+
+#details #right{
+    flex: 5;
+}
+
+.photos #faces img{
+    cursor: pointer;
+}
+
+#post{
+    background-color: #fff;
+    padding: 20px;
+}
+
+#post #content{
+    margin-top: 2%;
+    margin-left: 12%;
+    font-size: 20px;
+}
